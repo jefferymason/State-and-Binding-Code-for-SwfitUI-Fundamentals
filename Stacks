@@ -1,0 +1,25 @@
+import SwiftUI
+
+struct StacksView: View {
+  var body: some View {
+      VStack {
+        Text("Swift Mix")
+          .font(.title)
+          .fontWeight(.semibold)
+        Text("Swift Music for Mason")
+          .font(.title)
+          .fontWeight(.light)
+          .foregroundColor(.accentColor)
+        Text("Updated Frequently")
+          .font(Font.system(.body).smallCaps())
+  
+        Text("Whether you're a for or not, get used to frequent Taylor Swift references in Mobile App Development.")
+      }
+  }
+}
+
+struct StacksView_Previews: PreviewProvider {
+  static var previews: some View {
+    StacksView()
+  }
+}
