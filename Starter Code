@@ -1,0 +1,40 @@
+import SwiftUI
+
+struct StateAndBinding: View {
+    @State private var swiftyColor: Color = .red
+
+    var body: some View {
+      VStack {
+        ColorPicker("Swifty Color", selection: $swiftyColor)
+        
+        SwiftyControls(
+          swiftyColor: $swiftyColor
+        )
+        
+        Image(systemName: "swift")
+          .resizable()
+          .scaledToFit()
+          .padding(25)
+          .foregroundColor(.white)
+          .background(swiftyColor)
+          .cornerRadius(50)
+      }
+      .padding()
+    }
+  }
+
+struct StateAndBinding_Previews: PreviewProvider {
+    static var previews: some View {
+        StateAndBinding()
+    }
+}
+
+struct SwiftyControls: View {
+  @Binding var swiftyColor: Color
+  
+  var body: some View {
+    VStack {
+      ColorPicker("Swifty Color", selection: $swiftyColor)
+    }
+  }
+}
