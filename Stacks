@@ -13,7 +13,7 @@ struct StacksView: View {
         Text("Updated Frequently")
           .font(Font.system(.body).smallCaps())
   
-        Text("Whether you're a for or not, get used to frequent Taylor Swift references in Mobile App Development.")
+        Text("Whether you're a fan or not, get used to frequent Taylor Swift references in Mobile App Development.")
       }
   }
 }
